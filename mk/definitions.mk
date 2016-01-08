@@ -60,5 +60,5 @@ DESTDIRS = $(addprefix $(DESTDIR), $(exec_prefix) $(docdir) $(bindir) \
                         $(datadir) $(mpss_test_data) $(sysconfdir) $(includedir) $(libdir) \
                         $(srcdir) $(mandir))
 
-SMC_FW_VERSION = $(shell python2.6 $(REPOROOTDIR)/mk/get_versions.py --smc_fw --path $(PKG_CONFIG_SYSROOT_DIR)/usr/include/mpss-firmware)
-SMC_BL_VERSION = $(shell python2.6 $(REPOROOTDIR)/mk/get_versions.py --smc_bl --path $(PKG_CONFIG_SYSROOT_DIR)/usr/include/mpss-firmware)
+SMC_FW_VERSION = $(shell python2.7 $(REPOROOTDIR)/mk/get_versions.py --smc_fw --path mk)
+SMC_BL_VERSION = $(shell python2.7 $(REPOROOTDIR)/mk/get_versions.py --smc_bl --path mk)

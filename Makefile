@@ -55,13 +55,13 @@ version: $(MPSS_METADATA_C)
 
 # 'compilation' stage of python program
 pyinstall: version
-	python2.6 $(PYINSTALL) -F $(MAIN_EXEC)
+	python2.7 $(PYINSTALL) -F $(MAIN_EXEC)
 
 install-pyinstall: $(DESTDIR)$(bindir)
 	$(INSTALL) dist/miccheck $(DESTDIR)$(bindir)
 
 install: install-modules install-main
-	
+
 install-modules: $(MOD_DIR) $(DESTDIR_SRC)
 	$(CP) -r $(MOD_DIR) $(DESTDIR_MOD)
 
