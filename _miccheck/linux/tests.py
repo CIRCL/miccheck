@@ -85,7 +85,7 @@ def num_mics_pci():
         # "-d 8086:" will only display devices with 8086 as deviceid
         # -n prevents lspci to translate device ids to company names
         # -m enables machine readble output
-        output = execute_program('/sbin/lspci -d 8086: -n -m')
+        output = execute_program('/usr/bin/lspci -d 8086: -n -m')
     except OSError:
         raise ex.ExecProgramException('/sbin/lspci could not be found in '
                                       'the system')
